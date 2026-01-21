@@ -8,9 +8,9 @@
     </p>
 
     <div class="footer-links">
-      <a href="#profil">Profil</a>
-      <a href="#project">Project</a>
-      <a href="#pendidikan">Pendidikan</a>
+      <a href="/#profil">Profil</a>
+      <a href="/#project">Project</a>
+      <a href="/pendidikan">Pendidikan</a>
     </div>
 
     <span class="footer-copy">

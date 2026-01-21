@@ -11,6 +11,10 @@ Route::get('/pendidikan', function () {
     return view('pendidikan');
 });
 
+Route::get('/galeri', function () {
+    return view('galeri');
+});
+
 route::get('/project', [ProjectController::class, 'index']);
 
 

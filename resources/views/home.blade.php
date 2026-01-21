@@ -1,35 +1,51 @@
 @extends('layouts.layout')
-<!-- Welcoming-text -->
 @section('content')
+<!-- Welcoming-text -->
 <div class="hero">
   <div class="hero-content">
-    <h1>Halo, Saya <span>Muhammad Dzakwan</span></h1>
+    <span class="hero-badge">Selamat Datang!</span>
+    <h1>
+      Halo, Saya <br>
+      <span>Muhammad Dzakwan</span>
+    </h1>
     <p>
-      Selamat datang di halaman profil saya.
-      Saya adalah pelajar yang tertarik pada pengembangan diri,
-      teknologi, dan terus berusaha menjadi pribadi yang disiplin
-      serta bertanggung jawab.
+      Pelajar yang tertarik pada pengembangan diri, teknologi,
+      dan berkomitmen menjadi pribadi yang disiplin serta bertanggung jawab.
     </p>
+
+    <div class="hero-actions">
+      <a href="#profil" class="hero-btn primary">Lihat Profil</a>
+      <a href="#project" class="hero-btn secondary">Project Saya</a>
+    </div>
   </div>
 </div>
+
 <!-- Profil-section -->
-<div class="profil-title">
-  <h2>Profil Saya</h2>
-</div>
-<div class="profil" id="profil">
-  <div class="foto-profil">
-    <img src="Foto1.png" alt="" width="200px">
+<section class="profil-section" id="profil">
+  <h2 class="section-title">Profil Saya</h2>
+
+  <div class="profil-card animate">
+    <div class="profil-image">
+      <img src="Foto1.png" alt="Foto Dzakwan">
+    </div>
+
+    <div class="profil-info">
+      <h3>Muhammad Dzakwan</h3>
+      <p class="profil-desc">
+        Pelajar yang tertarik pada pengembangan diri, teknologi,
+        dan berkomitmen menjadi pribadi disiplin dan bertanggung jawab.
+      </p>
+
+      <ul class="profil-list">
+        <li><span>📍</span> Samarinda, 1 Februari 2009</li>
+        <li><span>🏠</span> Jl. Juanda 7 No. 6A Rt.4</li>
+        <li><span>📞</span> 0858-2272-2058</li>
+        <li><span>✉️</span> muhammaddzakwan035@gmail.com</li>
+        <li><span>🏫</span> SMKS TI Airlangga</li>
+      </ul>
+    </div>
   </div>
-  <div class="data-pribadi">
-    <ul>
-      <li class="data"><strong>Nama:</strong> Muhammad Dzakwan</li>
-      <li class="data"><strong>Tempat, Tanggal Lahir:</strong> Samarinda, 1 Februari 2009</li>
-      <li class="data"><strong>Alamat:</strong> Jl. Juanda 7 No. 6A Rt.4</li>
-      <li class="data"><strong>Nomor HP:</strong> 085822722058</li>
-      <li class="data"><strong>Email:</strong> muhammaddzakwan035@gmail.com</li>
-    </ul>
-  </div>
-</div>
+</section>
 <!-- Project-section -->
 <div class="project-section" id="project">
   <h2>Project Saya</h2>

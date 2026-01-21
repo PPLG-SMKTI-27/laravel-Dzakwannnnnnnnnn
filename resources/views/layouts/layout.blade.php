@@ -12,14 +12,12 @@
 </head>
 
 <body>
-
-  <!-- Header-Navbar -->
   <x-nav />
 
-  {{-- content --}}
-  @yield('content')
+  <main class="main-content">
+    @yield('content')
+  </main>
 
-  {{-- footer --}}
   <x-footer />
 </body>
 
