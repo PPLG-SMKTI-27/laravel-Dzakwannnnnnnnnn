@@ -34,7 +34,6 @@
   }
 
   .navelement::after {
-    content: "";
     position: absolute;
     width: 0%;
     height: 2px;
@@ -109,7 +108,7 @@
 
   /* ===== HERO WELCOME ===== */
   .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,6 +276,89 @@
     margin-bottom: 20px;
   }
 
+  .project-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .project-card {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  }
+
+  .project-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .project-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  /*====== SKILL SECTION =====*/
+
+  .skill-section {
+    padding: 80px 20px;
+    background-color: #f8fafc;
+    text-align: center;
+  }
+
+  .skill-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+  }
+
+  .skill-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .skill-card {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    background-color: #004cff;
+    color: white;
+  }
+
+  .skill-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .skill-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
   /* ===== GITHUB BUTTON ===== */
   .github-btn {
     display: inline-block;
@@ -364,4 +446,106 @@
     font-size: 32px;
     font-weight: 700;
     color: #333;
+  }
+
+  /* ===== EDUCATION PAGE ===== */
+  .education {
+    min-height: 100vh;
+    padding: 80px 20px;
+    background-color: #f8fafc;
+    text-align: center;
+  }
+
+  .education h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .edu-desc {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 50px;
+  }
+
+  /* ===== TIMELINE ===== */
+  .timeline {
+    max-width: 700px;
+    margin: auto;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background-color: #004cff;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    width: 45%;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .timeline-item:nth-child(odd) {
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .timeline-item:nth-child(even) {
+    margin-left: 55%;
+    text-align: left;
+  }
+
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    width: 14px;
+    height: 14px;
+    background-color: #004cff;
+    border-radius: 50%;
+  }
+
+  .timeline-item:nth-child(odd)::before {
+    right: -34px;
+  }
+
+  .timeline-item:nth-child(even)::before {
+    left: -34px;
+  }
+
+  .timeline-item .year {
+    font-size: 14px;
+    color: #004cff;
+    font-weight: 600;
+  }
+
+  .timeline-item h3 {
+    margin: 8px 0;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .timeline::before {
+      left: 10px;
+    }
+
+    .timeline-item {
+      width: 100%;
+      margin-left: 30px !important;
+      text-align: left;
+    }
+
+    .timeline-item::before {
+      left: -30px !important;
+    }
   }
