@@ -11,11 +11,12 @@
         <a href="/#project">Project</a>
       </li>
       <li class="navelement">
-        <a href="/#kontak">Kontak</a>
-      </li>
-      <li class="navelement">
         <a href="/#skill">kemampuan</a>
       </li>
+      <li class="navelement">
+        <a href="/#kontak">Kontak</a>
+      </li>
+
       <li class="navelement">
         <a href="/pendidikan">Pendidikan</a>
       </li>

@@ -3,7 +3,7 @@
 
 <!-- PENDIDIKAN -->
 <section class="education">
-  <h1>Riwayat Pendidikan</h1>
+  <h2 class="section-title">Riwayat Pendidikan Saya</h2>
   <p class="edu-desc">
     Berikut adalah riwayat pendidikan saya dari Sekolah Dasar hingga Perguruan Tinggi.
   </p>

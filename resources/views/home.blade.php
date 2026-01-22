@@ -37,19 +37,20 @@
       </p>
 
       <ul class="profil-list">
-        <li><span>📍</span> Samarinda, 1 Februari 2009</li>
-        <li><span>🏠</span> Jl. Juanda 7 No. 6A Rt.4</li>
-        <li><span>📞</span> 0858-2272-2058</li>
-        <li><span>✉️</span> muhammaddzakwan035@gmail.com</li>
-        <li><span>🏫</span> SMKS TI Airlangga</li>
+        @foreach($profil as $p)
+        <li><span>📍</span> {{ $p['Ttl'] }}</li>
+        <li><span>🏠</span> {{ $p['Alamat'] }}</li>
+        <li><span>📞</span> {{ $p['Telepon']}}</li>
+        <li><span>✉️</span> {{ $p['Email'] }}</li>
+        <li><span>🏫</span> {{ $p['Pendidikan'] }}</li>
+        @endforeach
       </ul>
     </div>
   </div>
 </section>
 <!-- Project-section -->
 <div class="project-section" id="project">
-  <h2>Project Saya</h2>
-
+  <h2 class="section-title">Project Saya</h2>
   <div class="project-container">
     <div class="project-card">
       <h3>Website Perizinan Siswa</h3>
@@ -77,7 +78,7 @@
 
 <!-- Skill -->
 <div class="skill-section" id="skill">
-  <h2>Skill Saya</h2>
+  <h2 class="section-title">Skill Saya</h2>
   <div class="skill-container">
     <div class="skill-card">
       <h3>PHP</h3>
@@ -94,7 +95,7 @@
 </div>
 <!-- Kontak -->
 <div class="contact-section" id="kontak">
-  <h2>Kontak Saya</h2>
+  <h2 class="section-title">Kontak Saya</h2>
   <p>Silakan hubungi saya melalui platform berikut</p>
 
   <div class="contact-container">

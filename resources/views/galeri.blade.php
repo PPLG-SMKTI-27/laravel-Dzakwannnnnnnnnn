@@ -2,7 +2,7 @@
 @section('content')
 <!-- Galeri -->
 <div class="gallery-section" id="galeri">
-  <h2>Galeri Saya</h2>
+  <h2 class="section-title">Galeri</h2>
   <p>Beberapa momen dan dokumentasi kegiatan saya</p>
 
   <div class="gallery-container">

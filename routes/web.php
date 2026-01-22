@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\DataUserController;
 
 Route::get('/', function () {
     return view('home');
@@ -15,7 +15,7 @@ Route::get('/galeri', function () {
     return view('galeri');
 });
 
-route::get('/project', [ProjectController::class, 'index']);
+Route::get('/', [DataUserController::class, 'index']);
 
 
 
