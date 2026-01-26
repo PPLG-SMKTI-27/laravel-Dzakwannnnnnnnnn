@@ -1,21 +1,69 @@
 @extends('layouts.layout')
 @section('content')
 <!-- Welcoming-text -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+@if(session('success'))
+<script>
+  Swal.fire({
+    icon: 'success',
+    title: 'Berhasil!',
+    text: '{{ session('success') }}',
+    timer: 2000,
+    showConfirmButton: false
+  })
+</script>
+@endif
+
+@if(session('error'))
+<script>
+  Swal.fire({
+    icon: 'error',
+    title: 'Gagal!',
+    text: '{{ session('error') }}'
+  })
+</script>
+@endif
+
+
+<!-- ===== HERO / WELCOMING TEXT ===== -->
 <div class="hero">
   <div class="hero-content">
     <span class="hero-badge">Selamat Datang!</span>
+
     <h1>
       Halo, Saya <br>
       <span>Muhammad Dzakwan</span>
     </h1>
+
     <p>
       Pelajar yang tertarik pada pengembangan diri, teknologi,
       dan berkomitmen menjadi pribadi yang disiplin serta bertanggung jawab.
     </p>
 
     <div class="hero-actions">
-      <a href="#profil" class="hero-btn primary">Lihat Profil</a>
-      <a href="#project" class="hero-btn secondary">Project Saya</a>
+      @auth
+      <!-- USER SUDAH LOGIN -->
+      <a href="#profil" class="hero-btn primary">
+        Lihat Profil
+      </a>
+      <a href="#project" class="hero-btn secondary">
+        Lihat Project
+      </a>
+
+      <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+        @csrf
+        <button class="hero-btn danger">Logout</button>
+      </form>
+      @else
+      <!-- USER BELUM LOGIN -->
+      <a href="{{ route('login') }}" class="hero-btn primary">
+        Login
+      </a>
+      <a href="{{ route('register') }}" class="hero-btn secondary">
+        Register
+      </a>
+      @endauth
     </div>
   </div>
 </div>
